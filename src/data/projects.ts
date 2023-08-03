@@ -102,7 +102,7 @@ export const projects: Project[] = [
   },
   {
     image: "/projects/two-factor-authentication.webp",
-    title: "Two Factor Authentication",
+    title: "2 Factor Authentication",
     codeUrl: "https://github.com/losarcosdev/Two-Factor-Authentication",
     articleUrl:
       "https://dev.to/losarcosdev/autenticacion-en-2-factores-via-sms-con-nestjs-postgresql-y-twilio-1mmd",

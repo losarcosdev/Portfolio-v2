@@ -59,7 +59,7 @@ export const Header = ({
       </div>
       <TypingText
         title={title}
-        textStyles="font-display text-white text-4xl md:text-6xl text-center"
+        textStyles="font-display text-white text-3xl md:text-6xl"
       />
       <div className="md:w-[60%] w-full text-center ">
         <p className="text-white text-sm md:text-base">{description}</p>
