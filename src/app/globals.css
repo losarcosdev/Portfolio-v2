@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(
+    to right top,
+    #000000,
+    #040404,
+    #090909,
+    #0d0d0d,
+    #101010,
+    #121212,
+    #141414,
+    #161616,
+    #171717,
+    #191919,
+    #1a1a1a,
+    #1b1b1b
+  );
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    to right,
+    #c6c5c5,
+    #d4d3d3,
+    #e2e2e2,
+    #f0f0f0,
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+}
