@@ -1,4 +1,4 @@
-import { Card, Particles, ProjectCard } from "@/components";
+import { Card, ProjectCard } from "@/components";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -7,10 +7,6 @@ import { projects } from "../../data/projects";
 const ProjectsPage = () => {
   return (
     <section className="relative h-fit py-10">
-      <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={250}
-      />
       <Link href={"/"}>
         <ChevronLeft className="h-8 w-8 text-zinc-400 absolute top-5 left-3 cursor-pointer hover:text-white" />
       </Link>
