@@ -50,7 +50,7 @@ export default async function ProjectPage({ params }: Props) {
               <Link
                 href={`${project.articleUrl}`}
                 target="_blank"
-                className="hidden bg-white rounded-md text-black text-sm p-2 absolute bottom-5 left-3 w-36 md:flex items-center justify-center gap-1 hover:bg-zinc-200 duration-200 shadow-lg"
+                className="hidden bg-white rounded-md text-black text-sm p-2 absolute bottom-3 left-32 w-36 md:flex items-center justify-center gap-1 hover:bg-zinc-200 duration-200 shadow-lg"
               >
                 <ExternalLink />
                 View Article

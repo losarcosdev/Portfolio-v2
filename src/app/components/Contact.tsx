@@ -14,7 +14,13 @@ const socialMedias = [
     url: "https://github.com/losarcosdev",
     icon: <Github size={20} />,
   },
-  { label: "Email", url: "#", icon: <Mail size={20} /> },
+  {
+    label: "Email",
+    url: `mailto:lucas.losarcos@gmail.com?subject=${encodeURIComponent(
+      ""
+    )}&body=${encodeURIComponent("")}`,
+    icon: <Mail size={20} />,
+  },
 ];
 
 export const Contact = () => {
