@@ -1,17 +1,10 @@
 import { ProjectCard } from "@/components";
-import Image from "next/image";
 import Link from "next/link";
-
-enum ProjectTypes {
-  FULLSTACK = "FULLSTACK",
-  BACKEND = "BACKEND",
-}
 
 interface IProjects {
   src: string;
   name: string;
   url: string;
-  type: ProjectTypes;
 }
 
 const projects: IProjects[] = [
@@ -19,25 +12,21 @@ const projects: IProjects[] = [
     name: "AudioRealm",
     src: "/projects/audiorealm.jpeg",
     url: "/projects/audiorealm",
-    type: ProjectTypes.FULLSTACK,
   },
   {
     name: "Real Estate Agent",
     src: "/projects/real-estate-agent.jpeg",
     url: "/projects/real-estate-agent",
-    type: ProjectTypes.FULLSTACK,
   },
   {
     name: "Article Summarizer",
     src: "/projects/article-summarizer.jpeg",
     url: "/projects/summarizer",
-    type: ProjectTypes.FULLSTACK,
   },
   {
     name: "Luxocar",
     src: "/projects/luxocar.jpeg",
     url: "/projects/luxocar",
-    type: ProjectTypes.FULLSTACK,
   },
 ];
 

@@ -6,7 +6,7 @@ import { projects } from "../../data/projects";
 
 const ProjectsPage = () => {
   return (
-    <section className="relative h-fit py-10">
+    <section className="relative p-3 lg:p-14">
       <Link href={"/"}>
         <ChevronLeft className="h-8 w-8 text-zinc-400 absolute top-5 left-3 cursor-pointer hover:text-white" />
       </Link>
@@ -20,41 +20,15 @@ const ProjectsPage = () => {
           </p>
           <hr className="border-[0.5px] border-zinc-700 w-full" />
         </div>
-        <div className="flex flex-wrap items-center gap-2 ">
-          {projects.map(({ image, slug, title }) => {
-            if (!image) {
-              return (
-                <Card key={slug}>
-                  <Link
-                    href={`/projects/${slug}`}
-                    className="hover:translate-y-[-3px] duration-300"
-                  >
-                    <article className="relative md:p-8 bg-gradient">
-                      <h2
-                        id="featured-post"
-                        className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
-                      >
-                        {title}
-                      </h2>
-                      <div>
-                        <p className="hidden text-zinc-50 lg:block mt-2">
-                          Read more <span aria-hidden="true">&rarr;</span>
-                        </p>
-                      </div>
-                    </article>
-                  </Link>
-                </Card>
-              );
-            }
-            return (
-              <ProjectCard
-                img={image}
-                name={title}
-                url={`/projects/${slug}`}
-                key={slug}
-              />
-            );
-          })}
+        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
+          {projects.map(({ image, slug, title }) => (
+            <ProjectCard
+              img={image}
+              name={title}
+              url={`/projects/${slug}`}
+              key={slug}
+            />
+          ))}
         </div>
       </div>
     </section>
