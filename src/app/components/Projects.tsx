@@ -14,9 +14,9 @@ const projects: IProjects[] = [
     url: "/projects/audiorealm",
   },
   {
-    name: "Real Estate Agent",
-    src: "/projects/real-estate-agent.jpeg",
-    url: "/projects/real-estate-agent",
+    name: "Reader",
+    src: "/projects/reader.jpeg",
+    url: "/projects/reader",
   },
   {
     name: "Article Summarizer",

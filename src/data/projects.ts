@@ -12,22 +12,21 @@ interface Project {
 export const projects: Project[] = [
   {
     description:
-      "This is a social interaction platform where users can create an account, create/update/delete posts, add comments, and recursively reply to  those comments. Users can browse posts by others, like or remove likes. Initially for a Frontend Mentor challenge, I expanded it into a Full-stack application. It was a challenging project, but at the end Im proud of the final product.",
-    image: "/projects/posts-app.jpeg",
+      "This is a social interaction platform where users can create an account, posts and communities. They can also add comments, and recursively reply to  those comments. Users can browse posts and communities created by others users and there is also the option to add or remove votes.It was a challenging project, but at the end Im proud of the final product.",
+    image: "/projects/reader.jpeg",
     tools: [
       "Typescript",
-      "React",
-      "Redux Toolkit",
-      "Vite",
+      "Next",
       "TailwindCSS",
       "Nest",
       "PostgreSQL",
       "Docker",
+      "Redis",
     ],
-    title: "Posts App",
-    siteUrl: "https://posts-app.site",
-    codeUrl: "https://github.com/losarcosdev/Posts-App",
-    slug: "posts-app",
+    title: "Reader",
+    siteUrl: "https://reader-dun.vercel.app",
+    codeUrl: "https://github.com/losarcosdev/reader-frontend",
+    slug: "reader",
   },
   {
     description:
@@ -45,24 +44,6 @@ export const projects: Project[] = [
     siteUrl: "https://audiorealm-v2.vercel.app/",
     codeUrl: "https://github.com/losarcosdev/Audiorealm",
     slug: "audiorealm",
-  },
-  {
-    description:
-      "This website was for a real estate agent, allowing users to navigate through properties and access information about location, price, and features. The project included an admin panel for managing properties. It was my first work for a real client, providing valuable experience in building a functional website.",
-    image: "/projects/real-estate-agent.jpeg",
-    tools: [
-      "Typescript",
-      "Next.js",
-      "Redux Toolkit",
-      "TailwindCSS",
-      "Nest",
-      "PostgreSQL",
-      "Docker",
-    ],
-    title: "Real Estate Agent",
-    siteUrl: "https://mirtafarias.com",
-    codeUrl: "https://github.com/losarcosdev/Real-Estate-Agent",
-    slug: "real-estate-agent",
   },
   {
     description:
