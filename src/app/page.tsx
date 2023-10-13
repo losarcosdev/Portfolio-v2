@@ -1,10 +1,11 @@
-import { About, Contact, Navbar, Projects, Stack } from "./components";
+import { About, Contact, Navbar, Projects, Stack , Work } from "./components";
 
 const HomePage = () => {
   return (
     <main className="relative">
       <Navbar />
       <About />
+      <Work />
       <Projects />
       <Stack />
       <Contact />

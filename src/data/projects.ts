@@ -1,13 +1,4 @@
-interface Project {
-  image: string;
-  tools: string[];
-  description: string;
-  title: string;
-  siteUrl?: string;
-  codeUrl?: string;
-  articleUrl?: string;
-  slug: string;
-}
+import { Project } from ".";
 
 export const projects: Project[] = [
   {

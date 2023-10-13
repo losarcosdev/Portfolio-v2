@@ -38,7 +38,7 @@ export const Projects = () => {
     >
       <div className="flex flex-col gap-2">
         <h3 className="z-10 duration-1000 text-white cursor-default font-display text-xl sm:text-2xl md:text-4xl">
-          Projects
+         Side projects
         </h3>
         <p className="text-zinc-500">
           Some projects that I made in my free time.

@@ -1,10 +1,8 @@
-import { projects } from "@/data";
-import { Header } from "../components";
+import { Header } from "@/app/projects/components";
+import { works } from "@/data";
 import Link from "next/link";
 import { ChevronLeft, ExternalLink } from "lucide-react";
 import Image from "next/image";
-
-export const revalidate = 60;
 
 interface Props {
   params: {
@@ -12,10 +10,10 @@ interface Props {
   };
 }
 
-export default async function ProjectPage({ params: { slug } }: Props) {
-  const project = projects.find((project) => project.slug == slug);
+const WorkPage = ({ params: { slug } }: Props) => {
+  const workProject = works.find((project) => project.slug === slug);
 
-  if (!project)
+  if (!workProject) {
     return (
       <div className="text-white flex flex-col items-center justify-center text-6xl font-display h-screen relative">
         <Link href={"/"}>
@@ -24,38 +22,39 @@ export default async function ProjectPage({ params: { slug } }: Props) {
         <p>Project found...I mean, not found 😅</p>
       </div>
     );
+  }
 
   return (
     <section className="bg-zinc-900 relative">
       <Header
-        githubUrl={`${project.codeUrl}`}
-        siteUrl={project.siteUrl}
-        articleUrl={project.articleUrl}
-        title={project.title}
-        description={project.description}
+        githubUrl={`${workProject.codeUrl}`}
+        siteUrl={workProject.siteUrl}
+        articleUrl={workProject.articleUrl}
+        title={workProject.title}
+        description={workProject.description}
       />
       <main className="max-w-4xl mx-auto py-14">
         <div className="flex flex-col gap-5 items-center justify-center md:h-screen px-2">
           <div className="relative">
             <Image
-              alt={`${project.title}`}
-              src={`${project.image}`}
+              alt={`${workProject.title}`}
+              src={`${workProject.image}`}
               width={1200}
               height={800}
               className="rounded-sm md:h-[420px] object-contain"
             />
-            {project.articleUrl ? (
+            {workProject.articleUrl ? (
               <Link
-                href={`${project.articleUrl}`}
+                href={`${workProject.articleUrl}`}
                 target="_blank"
                 className="hidden bg-white rounded-md text-black text-sm p-2 absolute bottom-3 left-32 w-36 md:flex items-center justify-center gap-1 hover:bg-zinc-200 duration-200 shadow-lg"
               >
                 <ExternalLink />
                 View Article
               </Link>
-            ) : project.siteUrl ? (
+            ) : workProject.siteUrl ? (
               <Link
-                href={`${project.siteUrl}`}
+                href={`${workProject.siteUrl}`}
                 target="_blank"
                 className="hidden bg-white rounded-md text-black text-sm p-2 absolute bottom-5 left-3 w-36 md:flex items-center justify-center gap-1 hover:bg-zinc-200 duration-200 shadow-lg"
               >
@@ -64,7 +63,7 @@ export default async function ProjectPage({ params: { slug } }: Props) {
               </Link>
             ) : (
               <Link
-                href={`${project.codeUrl}`}
+                href={`${workProject.codeUrl}`}
                 target="_blank"
                 className="hidden bg-white rounded-md text-black text-sm p-2 absolute bottom-5 left-3 w-36 md:flex items-center justify-center gap-1 hover:bg-zinc-200 duration-200 shadow-lg"
               >
@@ -74,22 +73,22 @@ export default async function ProjectPage({ params: { slug } }: Props) {
             )}
           </div>
           <p className="text-white text-left text-sm md:text-base">
-            {project.description}
+            {workProject.description}
           </p>
         </div>
         <div className="md:hidden px-2 pt-2">
-          {project.articleUrl ? (
+          {workProject.articleUrl ? (
             <Link
-              href={`${project.articleUrl}`}
+              href={`${workProject.articleUrl}`}
               target="_blank"
               className="bg-white rounded-md text-black text-sm p-2 flex items-center justify-center"
             >
               <ExternalLink />
               View Article
             </Link>
-          ) : project.siteUrl ? (
+          ) : workProject.siteUrl ? (
             <Link
-              href={`${project.siteUrl}`}
+              href={`${workProject.siteUrl}`}
               target="_blank"
               className="bg-white rounded-md text-black text-sm p-2 flex items-center justify-center"
             >
@@ -98,7 +97,7 @@ export default async function ProjectPage({ params: { slug } }: Props) {
             </Link>
           ) : (
             <Link
-              href={`${project.codeUrl}`}
+              href={`${workProject.codeUrl}`}
               target="_blank"
               className="bg-white rounded-md text-black text-sm p-2 flex items-center justify-center"
             >
@@ -115,7 +114,7 @@ export default async function ProjectPage({ params: { slug } }: Props) {
             <hr className="border-[0.5px] border-zinc-700 w-full mt-1" />
           </div>
           <ul className="pl-5 md:pl-0">
-            {project.tools.map((tool) => (
+            {workProject.tools.map((tool) => (
               <li className="text-white list-disc" key={tool}>
                 {tool}
               </li>
@@ -125,4 +124,6 @@ export default async function ProjectPage({ params: { slug } }: Props) {
       </main>
     </section>
   );
-}
+};
+
+export default WorkPage;
