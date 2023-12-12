@@ -4,10 +4,7 @@ import Link from "next/link";
 
 export const About = () => {
   return (
-    <div className="flex flex-col items-center h-screen overflow-hidden from-black via-zinc-600/20 to-black md:max-w-5xl container mx-auto px-2 md:p-0">
-      <div className="my-16">
-        <p className="text-zinc-500">Buenos Aires | Argentina</p>
-      </div>
+    <div className="flex flex-col items-center justify-center h-screen overflow-hidden from-black via-zinc-600/20 to-black md:max-w-5xl container mx-auto px-2 md:p-0">
       <h1 className="z-10 text-4xl duration-1000 text-white cursor-default text-center font-display sm:text-6xl md:text-9xl">
         Lucas Los Arcos
       </h1>
